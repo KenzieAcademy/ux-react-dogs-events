@@ -13,7 +13,66 @@
   color: white;
 }
 
+.newDog {
+  width: 200px;
+  height: 30px;
+  font-size: 1rem;
+}
+
+.newDog-btn {
+  margin-left: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+}
+
+.newDog-btn:hover {
+  border: 2px solid red;
+  color: red;
+}
+
+.newDog-btn:active {
+  font-size: 1.1rem;
+}
+
+.newDog-btn:disabled {
+  opacity: .5;
+  color: black;
+  border:2px solid black;
+}
+
 .dogList {
   list-style: none;
   padding: 0px;
+  line-height: 3rem;
+}
+
+.pet-btn {
+  margin-left: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+}
+
+.pet-btn:hover {
+  border: 2px solid red;
+  color: red;
+}
+
+.pet-btn:active {
+  font-size: 1.1rem;
+}
+
+.dogs {
+  padding: 10px;
 }
