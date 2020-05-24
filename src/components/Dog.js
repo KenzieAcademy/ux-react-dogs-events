@@ -7,7 +7,7 @@ const petTheDog = (dog) =>{
 
 function Dog(props) {
   return <div>{props.dog.name}
-  <button onclick={() => petTheDog(props.dog.name)}>Pet the dog!</button></div>
+  <button onClick={() => petTheDog(props.dog.name)}>Pet the dog!</button></div>
   ;}
 
 export default Dog;
