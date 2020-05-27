@@ -7,13 +7,13 @@ class App extends Component {
   state = {
     dogs: [
       {
-        name: "Scruffles",
+        name: "Katra",
       },
       {
         name: "Snarf",
       },
       {
-        name: "Wookie",
+        name: "She-Ra",
       },
     ],
     newDog: ""
