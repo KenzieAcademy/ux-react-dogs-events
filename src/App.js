@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+  import React, { Component } from "react";
 import Dog from "./components/Dog";
 import Header from "./components/Header";
 import "./App.css";
@@ -16,7 +16,21 @@ class App extends Component {
         name: "Wookie",
       },
     ],
+    newDogName: "",
   };
+    handleChangeDogName = (event) =>{
+      this.setState({newDogName: event.target.value});
+    };
+    handleAdoptDog = (event) => {
+      this.setState(state=> {
+        return{
+          dogs: [...state.dogs, {name: state.newDogName}],
+          newDogName: "",
+          
+        };
+
+      });
+    };
 
   render() {
     return (
@@ -31,7 +45,11 @@ class App extends Component {
           ))}
         </ul>
         <br />
-        <div>Add Input and button here!</div>
+        <div>
+          <input type="text" onChange={this.handleChangeDogName}
+           value={this.state.newDogName} />
+          <button onClick={this.handleAdoptDog}>Adopt A Dog</button>
+        </div>
       </div>
     );
   }
