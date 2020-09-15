@@ -21,17 +21,15 @@ class App extends Component {
 
   handleChangeDogName = (event) => {
     const value = event.target.value
-    this.setState({newDog: value});
+    this.setState({newDogName: value});
   };
 
-  addDog = () => {
+  addDog = (event) => {
     this.setState((state) => {
       return {
         dogs: [
           ...this.state.dogs, 
-          {id: 3, 
-            description: this.state.newDogName, 
-            isCompleted: false},
+          {name: state.newDogName},
           ],
           newDogName: "",
       };
