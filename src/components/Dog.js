@@ -2,7 +2,12 @@
 import React from "react";
 
 function Dog(props) {
-  return <div>{props.dog.name}</div>;
+  const petDog = () => {
+    alert("You pet " + props.dog.name)
+  }
+  return <div>{props.dog.name}
+  <button onClick={petDog}>Pet Me!</button>
+  </div>;
 }
 
 export default Dog;
