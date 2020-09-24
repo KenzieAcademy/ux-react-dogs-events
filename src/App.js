@@ -16,8 +16,18 @@ class App extends Component {
         name: "Wookie",
       },
     ],
+    newDog: "",
   };
-
+  handleInputChange = (event)=>{this.setState({newDog:event.target.value})}
+  handleAddNewDog = () => {
+    let newDogObject = {
+      name: this.state.newDog,
+    };
+    this.setState((state) => ({
+      dogs: [...state.dogs, newDogObject],
+      newDogObject: "",
+    }));
+  };
   render() {
     return (
       <div className="app">
@@ -31,7 +41,10 @@ class App extends Component {
           ))}
         </ul>
         <br />
-        <div>Add Input and button here!</div>
+        <div>
+          <input type="text" value={this.state.newDog} onChange={this.handleInputChange}></input>
+          <button onClick={this.handleAddNewDog}>Add New</button>
+        </div>
       </div>
     );
   }
